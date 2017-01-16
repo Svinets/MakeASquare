@@ -1,0 +1,20 @@
+{
+  "name": "mostvaluableproject",
+  "version": "1.0.0",
+  "description": "don't really know yet",
+  "authors": [
+    "Scott Chao"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1"
+  }
+}

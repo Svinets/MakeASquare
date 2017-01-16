@@ -1,0 +1,16 @@
+<div id="container">
+  <h1>Write PAGE</h1>
+  <button ng-click="back()">NEVERMIND!</button><br>
+  <form>
+    <input ng-model="author" placeholder="Username"></input><br>
+    <input ng-model="title" placeholder="Show title"></input>
+    <select ng-init="score = scores[4]"
+            ng-model="score"
+            ng-options="score for score in scores">
+    </select><br>
+    <textarea ng-model="text" placeholder="Write here."></textarea><br>
+    <button ng-click="submit()">Submit review</button>
+
+  </form>
+  <p>{{ message }}</p>
+</div>
