@@ -1,21 +1,21 @@
-var anirevs = angular.module('anirevs', [
-  'anirevs.services',
-  'anirevs.reviews',
-  'anirevs.write',
+var draw = angular.module('draw', [
+  'draw.services',
+  'draw.squares',
+  'draw.make',
   'ngRoute'
 ])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/reviews', {
-      templateUrl: 'app/views/reviews.html',
-      controller: 'reviewsController'
+    .when('/squares', {
+      templateUrl: 'app/views/squares.html',
+      controller: 'squaresController'
     })
-    .when('/write', {
-      templateUrl: 'app/views/write.html',
-      controller: 'writeController'
+    .when('/make', {
+      templateUrl: 'app/views/make.html',
+      controller: 'makeController'
     })
     .otherwise({
-      redirectTo: '/reviews'
+      redirectTo: '/squares'
     })
 
   $locationProvider.html5Mode(true);

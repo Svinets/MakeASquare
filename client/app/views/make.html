@@ -1,0 +1,13 @@
+<div id="container">
+  <h1>Draw a SQUARE!</h1>
+  <button ng-click="back()">NEVERMIND!</button><br>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#sketch').sketch();
+    });
+  </script>
+
+  <canvas id="sketch" width="300" height="300"></canvas><br>
+  <a href="#sketch" data-download="png" ng-click="submit()">Submit!</a>
+</div>

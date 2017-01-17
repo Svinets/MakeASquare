@@ -1,0 +1,10 @@
+<div id="container">
+  <h1>Squares PAGE</h1>
+  <button ng-click="drawOne()">DRAW A SQUARE!!!</button>
+  <div ng-repeat='square in data.squares track by $index'>
+    <div squareid="{{ square._id }}">
+      <img src="{{ square.URI }}">
+      <span>{{ square }}</span>
+    </div><br>
+  </div>
+</div>

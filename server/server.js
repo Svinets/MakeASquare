@@ -7,7 +7,7 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/myTestDB');
 
-var reviews = require('./routes.js');
+var reviews = require('./config/routes.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
