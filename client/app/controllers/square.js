@@ -4,12 +4,18 @@ angular.module('draw.square', [])
   $scope.message = 'Hello from the square page!';
   $scope.data = {};
 
-  //this should provide all the data from api to the scope
-  $scope.help = function() {
+  $scope.loadSquare = function() {
     $scope.data.URI = $window.localStorage.URI;
+  }
+
+  $scope.takeAGuess = function() {
+    Squares.makeSquare({
+      artist
+    });
   }
 
   $scope.noClue = function() {
     $location.path('/squares');
   }
+
 });

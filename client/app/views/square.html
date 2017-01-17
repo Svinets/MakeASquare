@@ -1,8 +1,7 @@
 <div id="container">
   <h1>Square PAGE</h1>
   <button ng-click="noClue()">I HAVE NO CLUE!!!</button><br>
-    <div ng-init="help()" squareid="{{ square._id }}">HELLO
-      <img src="{{ data.URI }}">
-      <span>{{ square }}</span>
-    </div><br>
+  <div ng-init="loadSquare()">
+    <img src="{{ data.URI }}">
+  </div><br>
 </div>

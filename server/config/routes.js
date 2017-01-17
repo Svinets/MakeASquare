@@ -6,5 +6,6 @@ var controller = require('./controllers');
 
 router.get('/squares', controller.getImage);
 router.post('/squares', controller.submitImage);
+//router.post('/square', )
 
 module.exports = router;

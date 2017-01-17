@@ -12,6 +12,7 @@ angular.module('draw.squares', [])
   $scope.guess = function() {
     //localStorage.clear();
     localStorage.setItem('URI', this.square.URI);
+    localStorage.setItem('squareID', this.square._id);
     $location.path('/square');
   }
 

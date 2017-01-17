@@ -23,7 +23,5 @@ angular.module('draw.services', [])
         return resp;
       });
     }
-
-    //guess: function() 
   }
 });
