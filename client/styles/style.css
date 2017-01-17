@@ -4,8 +4,13 @@
 
 img {
   border: 1px solid black;
+  pointer-events: none;
 }
 
 textarea {
   resize: none;
+}
+
+.square, .ng-scope {
+  display: inline-block;
 }

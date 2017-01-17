@@ -24,6 +24,7 @@ angular.module('draw.make', [])
         subject: 'rabbit', //the subject of the image
         guesses: [] //an array containing all guesses directed towards the image
       });
+      $location.path('/squares');
     }, 0);
   }
 

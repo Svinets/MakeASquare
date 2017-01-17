@@ -9,6 +9,12 @@ angular.module('draw.squares', [])
     $scope.data.squares = resp;
   });
 
+  $scope.guess = function() {
+    //localStorage.clear();
+    localStorage.setItem('URI', this.square.URI);
+    $location.path('/square');
+  }
+
   $scope.drawOne = function() {
     $location.path('/make');
   }
