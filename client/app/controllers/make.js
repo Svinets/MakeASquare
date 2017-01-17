@@ -26,6 +26,7 @@ angular.module('draw.make', [])
         artist: 'anon', //the name of the artist
         URI: dataURI, //the dataURI of the canvas
         subject: word, //the subject of the image
+        solved: false, //whether the square is won
         guesses: [] //an array containing all guesses directed towards the image
       });
       $location.path('/squares');

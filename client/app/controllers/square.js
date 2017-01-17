@@ -6,6 +6,9 @@ angular.module('draw.square', [])
 
   $scope.loadSquare = function() {
     $scope.data.URI = $window.localStorage.URI;
+    Squares.getGuesses({
+      _id: $window.localStorage.squareID
+    });
   }
 
   //posts their guess to the db
@@ -29,5 +32,4 @@ angular.module('draw.square', [])
   $scope.noClue = function() {
     $location.path('/squares');
   }
-
 });

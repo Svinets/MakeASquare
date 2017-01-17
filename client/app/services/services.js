@@ -23,6 +23,17 @@ angular.module('draw.services', [])
       });
     },
 
+    getGuesses: function(id) {
+      return $http({
+        method: 'GET',
+        url: '/api/square',
+        params: id
+      }).then(function(resp) {
+        console.log('services.js - I GOT THIS ONE', resp.data);
+        return resp.data;
+      });
+    },
+
     takeGuess: function(square) {
       console.log(square);
       return $http({

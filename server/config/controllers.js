@@ -14,8 +14,10 @@ module.exports = {
   },
 
   getGuesses: function(req, res, next) {
-    Squares.findById(FILLTHISIN, function(err, guesses) {
+    Squares.findById(req.query, function(err, guesses) {
+      console.log(guesses);
       if (err) console.error(err);
+      res.json(guesses);
     });
   },
 
