@@ -1,6 +1,9 @@
 <div id="container">
-  <span ng-init="getWord()" class="title">Draw a SQUARE!</span>
-  <button ng-click="back()">NEVERMIND!</button><br>
+  <span class="title">Draw a SQUARE!</span>
+  <button ng-click="back()">NEVERMIND!</button>
+  <button ng-click="startTimer(); getWord()">START!</button>
+  <span>{{ timer }}</span>
+  <span>{{ randomWord }}</span><br>
 
   <script type="text/javascript">
     $(function() {
