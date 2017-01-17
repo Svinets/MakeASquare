@@ -1,7 +1,8 @@
 <div id="container">
-  <h1>Square PAGE</h1>
-  <button ng-click="noClue()">I HAVE NO CLUE!!!</button><br>
+  <span class="title">Square PAGE</span><br>
   <div ng-init="loadSquare()">
     <img src="{{ data.URI }}">
   </div><br>
+  <input ng-model="guess" placeholder="What the heck is that??"></input><br>
+  <button ng-click="takeAGuess()">GUESS!</button><button ng-click="noClue()">I HAVE NO CLUE!!!</button>
 </div>

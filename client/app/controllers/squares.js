@@ -9,7 +9,7 @@ angular.module('draw.squares', [])
     $scope.data.squares = resp;
   });
 
-  $scope.guess = function() {
+  $scope.critique = function() {
     //localStorage.clear();
     localStorage.setItem('URI', this.square.URI);
     localStorage.setItem('squareID', this.square._id);

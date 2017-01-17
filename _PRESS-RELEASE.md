@@ -17,10 +17,10 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Make-a-Square! is a game where you can either choose to draw a square (artist), or guess the content of a square drawn by another user (art-critic).
+  > Make-a-Square! is a game where you can either choose to play the role of an artist and draw a square, or guess the content of a square drawn by another user as an art-critic.
 
 ## Summary ##
-  > The role of the artist is to attempt to draw an image into a square canvas, based on a random subject. The role of an art-critic is to guess what the heck the artist drew, by typing your guess of the image subject into the provided field.
+  > The role of the artist is to attempt to draw a provided random subject into a square canvas. The role of an art-critic is to guess what the artist drew, by inputting your guess into the provided field.
 
 ## How to Get Started ##
   > Click into the blank square to draw, or click on a drawn square to guess what it is!

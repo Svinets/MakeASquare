@@ -13,13 +13,24 @@ angular.module('draw.services', [])
     },
 
     makeSquare: function(square) {
-      console.log(square);
       return $http({
         method: 'POST',
-        url: '/api/squares',
+        url: '/api/make',
         data: square
       }).then(function(resp) {
         console.log('services.js - I POSTED THIS', resp)
+        return resp;
+      });
+    },
+
+    takeGuess: function(square) {
+      console.log(square);
+      return $http({
+        method: 'PUT',
+        url: '/api/square',
+        data: square
+      }).then(function(resp) {
+        console.log('services.js - I PUT THIS', resp)
         return resp;
       });
     }

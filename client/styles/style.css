@@ -11,6 +11,10 @@ textarea {
   resize: none;
 }
 
+.title {
+  font-size: 30px;
+}
+
 .square, .ng-scope {
   display: inline-block;
 }

@@ -5,7 +5,7 @@ var controller = require('./controllers');
 //add grunt or gulp files maybe
 
 router.get('/squares', controller.getImage);
-router.post('/squares', controller.submitImage);
-//router.post('/square', )
+router.post('/make', controller.submitImage);
+router.put('/square', controller.addGuess);
 
 module.exports = router;

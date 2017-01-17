@@ -9,9 +9,12 @@ angular.module('draw.square', [])
   }
 
   $scope.takeAGuess = function() {
-    Squares.makeSquare({
-      artist
-    });
+    console.log($window.localStorage.squareID);
+    console.log($scope.guess);
+    $scope.guess = '';
+    // Squares.takeGuess({
+    //   _id: $window.localStorage.squareID
+    // });
   }
 
   $scope.noClue = function() {

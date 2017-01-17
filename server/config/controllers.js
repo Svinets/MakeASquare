@@ -11,7 +11,11 @@ module.exports = {
     Squares.create(req.body, function(err, obj) {
       if (err) console.error(err);
     });
-  }
+  },
 
-  
+  addGuess: function(req, res, next) {
+    Squares.update(req.body, function(err, obj) {
+      if (err) console.error(err);
+    });
+  }
 }
