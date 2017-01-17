@@ -13,9 +13,22 @@ module.exports = {
     });
   },
 
-  addGuess: function(req, res, next) {
-    Squares.update(req.body, function(err, obj) {
+  getGuesses: function(req, res, next) {
+    Squares.findById(FILLTHISIN, function(err, guesses) {
       if (err) console.error(err);
     });
+  },
+
+  addGuess: function(req, res, next) {
+    // Squares.update(req.body, function(err, obj) {
+    //   if (err) console.error(err);
+    // });
+    Squares.findByIdAndUpdate(
+      {_id: req.body._id },
+      { $push: { guesses: req.body.guess } },
+      function(err, guess) {
+        if (err) console.error(err);
+      }
+    );
   }
 }
