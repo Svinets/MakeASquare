@@ -3,6 +3,10 @@ angular.module('draw.make', [])
 .controller('makeController', function($scope, $location, Squares) {
   $scope.message = 'Is this going to work?';
 
+  $scope.getWord = function() {
+    $scope.randomWord = Squares.randomWord();
+  }  
+
   $scope.submit = function() {
     setTimeout(function() {
       console.log(dataURI);
