@@ -1,6 +1,16 @@
 <div id="container">
   <h1>Write PAGE</h1>
   <button ng-click="back()">NEVERMIND!</button><br>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#sketch').sketch();
+    });
+  </script>
+
+  <canvas id="sketch" width="300" height="300"></canvas><br>
+  <a href="#sketch" data-download="png" ng-click="submitImage()">Download</a>
+
   <form>
     <input ng-model="author" placeholder="Username"></input><br>
     <input ng-model="title" placeholder="Show title"></input>

@@ -11,5 +11,11 @@ module.exports = {
     Review.create(req.body, function(err, obj) {
       if (err) console.error(err);
     });
+  },
+
+  submitImage: function(req, res, next) {
+    Canvas.create(req.body, function(err, obj) {
+      if (err) console.error(err);
+    });
   }
 }

@@ -6,13 +6,22 @@ angular.module('anirevs.write', [])
 
   $scope.submit = function() {
     Reviews.writeReview({
-      author : $scope.author,
-      title : $scope.title,
-      score : $scope.score,
-      votes : 0,
-      text : $scope.text
+      author: $scope.author,
+      title: $scope.title,
+      score: $scope.score,
+      votes: 0,
+      text: $scope.text
     });
     $location.path('/reviews');
+  }
+
+  $scope.submitImage = function() {
+    setTimeout(function() {
+      console.log(dataURI);
+      Reviews.writeReview({
+        URI : dataURI
+      });
+    }, 0);
   }
 
   $scope.back = function() {
