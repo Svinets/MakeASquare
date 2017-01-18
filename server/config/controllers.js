@@ -4,7 +4,7 @@ module.exports = {
   getImage: function(req, res, next) {
     Squares.find().then(function(squares) {
       res.json(squares);
-    })
+    });
   },
 
   submitImage: function(req, res, next) {
@@ -15,16 +15,12 @@ module.exports = {
 
   getGuesses: function(req, res, next) {
     Squares.findById(req.query, function(err, guesses) {
-      console.log(guesses);
       if (err) console.error(err);
       res.json(guesses);
     });
   },
 
   addGuess: function(req, res, next) {
-    // Squares.update(req.body, function(err, obj) {
-    //   if (err) console.error(err);
-    // });
     Squares.findByIdAndUpdate(
       {_id: req.body._id },
       { $push: { guesses: req.body.guess } },
@@ -32,5 +28,15 @@ module.exports = {
         if (err) console.error(err);
       }
     );
-  }
+  },
+
+  solve: function(req, res, next) {
+    Squares.findByIdAndUpdate(
+      {_id: req.body._id },
+      { $set: { solved: true } },
+      function(err, guess) {
+        if (err) console.error(err);
+      }
+    );
+  },
 }

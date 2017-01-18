@@ -3,6 +3,11 @@
   <div ng-init="loadSquare()">
     <img src="{{ data.URI }}">
   </div><br>
-  <input ng-model="guess" placeholder="What the heck is that??"></input><br>
-  <button ng-click="takeAGuess()">GUESS!</button><button ng-click="noClue()">I HAVE NO CLUE!!!</button>
+  <form ng-submit="takeAGuess()">
+    <input ng-model="guess" placeholder="What the heck is that??"></input><br>
+    <button>GUESS!</button><button ng-click="noClue()">I HAVE NO CLUE!!!</button><br>
+  </form>
+  <div class="guesses" ng-Repeat="guess in data.guesses track by $index">
+    <span>{{ guess }}</span>
+  </div>
 </div>

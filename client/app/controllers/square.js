@@ -8,6 +8,8 @@ angular.module('draw.square', [])
     $scope.data.URI = $window.localStorage.URI;
     Squares.getGuesses({
       _id: $window.localStorage.squareID
+    }).then(function(square) {
+      $scope.data.guesses = square.guesses.reverse();
     });
   }
 
@@ -19,7 +21,15 @@ angular.module('draw.square', [])
     //console.log($scope.guess);
     Squares.takeGuess({
       _id: $window.localStorage.squareID,
-      guess: $scope.guess
+      guess: $window.localStorage.playerUserName + ' : ' + $scope.guess
+    });
+
+    //console.log($window.localStorage.squareID);
+    Squares.getGuesses({
+      _id: $window.localStorage.squareID
+    }).then(function(square) {
+      $scope.data.guesses = square.guesses.reverse();
+      
     });
     $scope.guess = '';
   }
