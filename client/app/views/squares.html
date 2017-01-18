@@ -1,12 +1,15 @@
 <div ng-init="login()" id="container">
   <span class="title">Squares PAGE</span>
-  <button ng-click="drawOne()">DRAW A SQUARE!!!</button><br>
-  <div class="square" ng-repeat="square in data.squares track by $index">
+  <button ng-click="drawOne()">DRAW A SQUARE!!!</button><br><br>
+  <div class="squares" ng-repeat="square in data.squares track by $index">
     <div ng-bind-html="cover"></div>
     <div ng-if="done(square)">
       <div class="complete">SOLVED</div>
     </div>
-    <div ng-click="critique()">
+    <div ng-if="!done(square)">
+      <div class="incomplete">{{ 'Drawn by ' + square.artist }}</div>
+    </div>
+    <div class="square" ng-click="critique()">
       <img src="{{ square.URI }}">
     </div>
   </div>

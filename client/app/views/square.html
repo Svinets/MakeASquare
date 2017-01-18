@@ -1,11 +1,16 @@
 <div id="container">
   <span class="title">Square PAGE</span>
+  <div id="giveup">
+    <button ng-click="noClue()">I HAVE NO CLUE!!!</button>
+  </div><br><br>
   <div ng-init="loadSquare()">
     <img src="{{ data.URI }}">
-  </div><br>
+  </div>
   <form ng-submit="takeAGuess()">
-    <input ng-model="guess" placeholder="What the heck is that??"></input><br>
-    <button>GUESS!</button><button ng-click="noClue()">I HAVE NO CLUE!!!</button><br>
+    <input ng-model="guess" placeholder="What is this?"></input>
+    <div id="guess">
+      <button>GUESS!</button><br>
+    </div>
   </form>
   <div class="guesses" ng-Repeat="guess in data.guesses track by $index">
     <span>{{ guess }}</span>

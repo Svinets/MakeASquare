@@ -1,3 +1,7 @@
+body {
+  font-family: 'Indie Flower', cursive;
+}
+
 #sketch {
   border: 1px solid black;
 }
@@ -5,10 +9,15 @@
 img {
   border: 1px solid black;
   pointer-events: none;
+  width: 299px;
 }
 
 textarea {
   resize: none;
+}
+
+input {
+  font-size: 16px;
 }
 
 .title {
@@ -16,24 +25,60 @@ textarea {
   font-weight: bold;
 }
 
-.square {
+#top {
+  padding-left: 20px;
+}
+
+.squares {
   display: inline-block;
+  vertical-align: top;
+}
+
+.square {
+  height: 299px;
+  width: 300px;
 }
 
 .complete {
   font-size: 70px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 301px;
-  width: 301px;
+  height: 300px;
+  width: 300px;
+}
+
+.incomplete {
+  font-size: 20px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
 }
 
 .guesses {
   padding: 10px;
 }
 
+#info {
+  font-size: 30px;
+}
+
 #user {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+#start {
+  display: inline-block;
+  padding-left: 190px;
+}
+
+#guess {
+  display: inline-block;
+  padding-left: 60px;
+}
+
+#giveup {
+  display: inline-block;
+  padding-left: 20px;
 }

@@ -28,7 +28,7 @@ angular.module('draw.make', [])
     var word = $scope.randomWord;
     setTimeout(function() {
       Squares.makeSquare({
-        artist: 'anon', //the name of the artist
+        artist: $window.localStorage.playerUserName, //the name of the artist
         URI: dataURI, //the dataURI of the canvas
         subject: word || 'none', //the subject of the image
         solved: false, //whether the square is won
