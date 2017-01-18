@@ -4,10 +4,10 @@
     <button ng-click="noClue()">I HAVE NO CLUE!!!</button>
   </div><br><br>
   <div ng-init="loadSquare()">
-    <img src="{{ data.URI }}">
+    <img class="drawn" src="{{ data.URI }}">
   </div>
   <form ng-submit="takeAGuess()">
-    <input ng-model="guess" placeholder="What is this?"></input>
+    <input ng-model="guess" placeholder="What is this?" autofocus></input>
     <div id="guess">
       <button>GUESS!</button><br>
     </div>

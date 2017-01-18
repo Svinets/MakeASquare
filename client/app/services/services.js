@@ -7,7 +7,6 @@ angular.module('draw.services', [])
         method: 'GET',
         url: '/api/squares'
       }).then(function(resp) {
-        console.log('services.js - I GOT THIS', resp.data)
         return resp.data;
       });
     },
@@ -18,7 +17,6 @@ angular.module('draw.services', [])
         url: '/api/make',
         data: square
       }).then(function(resp) {
-        console.log('services.js - I POSTED THIS', resp)
         return resp;
       });
     },
@@ -29,7 +27,6 @@ angular.module('draw.services', [])
         url: '/api/square',
         params: id
       }).then(function(resp) {
-        console.log('services.js - I GOT THIS ONE', resp.data);
         return resp.data;
       });
     },
@@ -40,19 +37,16 @@ angular.module('draw.services', [])
         url: '/api/square',
         data: square
       }).then(function(resp) {
-        console.log('services.js - I PUT THIS', resp)
         return resp;
       });
     },
 
     solve: function(square) {
-      console.log('in services', square);
       return $http({
         method: 'PUT',
         url: '/api/done',
         data: square
       }).then(function(resp) {
-        console.log('services.js - I WON', resp)
         return resp;
       });
     },
