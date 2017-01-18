@@ -1,6 +1,6 @@
 angular.module('draw.services', [])
 
-.factory('Squares', function($http) {
+.factory('Squares', function($http, $window) {
   return {
     getAll: function() {
       return $http({
@@ -29,13 +29,12 @@ angular.module('draw.services', [])
         url: '/api/square',
         params: id
       }).then(function(resp) {
-        //console.log('services.js - I GOT THIS ONE', resp.data);
+        console.log('services.js - I GOT THIS ONE', resp.data);
         return resp.data;
       });
     },
 
     takeGuess: function(square) {
-      //console.log(square);
       return $http({
         method: 'PUT',
         url: '/api/square',
@@ -47,13 +46,13 @@ angular.module('draw.services', [])
     },
 
     solve: function(square) {
-      console.log(square);
+      console.log('in services', square);
       return $http({
         method: 'PUT',
         url: '/api/done',
         data: square
       }).then(function(resp) {
-        console.log('services.js - I PUT THIS', resp)
+        console.log('services.js - I WON', resp)
         return resp;
       });
     },

@@ -1,5 +1,5 @@
 <div id="container">
-  <span class="title">Square PAGE</span><br>
+  <span class="title">Square PAGE</span>
   <div ng-init="loadSquare()">
     <img src="{{ data.URI }}">
   </div><br>
@@ -10,4 +10,8 @@
   <div class="guesses" ng-Repeat="guess in data.guesses track by $index">
     <span>{{ guess }}</span>
   </div>
+  <div id="user">
+    LOGGED IN AS - {{ user }}<br>
+    <button ng-click="logout()">LOGOUT</button>
+  <div>
 </div>

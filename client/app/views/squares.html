@@ -1,12 +1,17 @@
 <div ng-init="login()" id="container">
   <span class="title">Squares PAGE</span>
-  <button ng-click="drawOne()">DRAW A SQUARE!!!</button>
-  <button ng-click="logout()">LOGOUT</button>
-  LOGGED IN AS - {{ user }}<br>
+  <button ng-click="drawOne()">DRAW A SQUARE!!!</button><br>
   <div class="square" ng-repeat="square in data.squares track by $index">
     <div ng-bind-html="cover"></div>
-    <div ng-init="done(square)" ng-click="critique()">
+    <div ng-if="done(square)">
+      <div class="complete">SOLVED</div>
+    </div>
+    <div ng-click="critique()">
       <img src="{{ square.URI }}">
     </div>
   </div>
+  <div id="user">
+    LOGGED IN AS - {{ user }}<br>
+    <button ng-click="logout()">LOGOUT</button>
+  <div>
 </div>

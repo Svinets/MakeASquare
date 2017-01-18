@@ -1,8 +1,13 @@
 angular.module('draw.make', [])
 
 .controller('makeController', function($scope, $location, $timeout, $window, Squares) {
-  $scope.message = 'Is this going to work?';
+  $scope.user = $window.localStorage.playerUserName;
   $scope.timer = 30;
+
+  $scope.logout = function() {
+    $window.localStorage.removeItem('playerUserName');
+    $location.path('/squares');
+  }  
 
   $scope.back = function() {
     $location.path('/squares');
@@ -25,7 +30,7 @@ angular.module('draw.make', [])
       Squares.makeSquare({
         artist: 'anon', //the name of the artist
         URI: dataURI, //the dataURI of the canvas
-        subject: word, //the subject of the image
+        subject: word || 'none', //the subject of the image
         solved: false, //whether the square is won
         guesses: [] //an array containing all guesses directed towards the image
       });

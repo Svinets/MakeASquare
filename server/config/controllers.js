@@ -34,6 +34,7 @@ module.exports = {
     Squares.findByIdAndUpdate(
       {_id: req.body._id },
       { $set: { solved: true } },
+      { upsert: true },
       function(err, guess) {
         if (err) console.error(err);
       }

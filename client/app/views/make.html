@@ -1,10 +1,7 @@
 <div id="container">
   <span class="title">Draw a SQUARE!</span>
   <button ng-click="back()">NEVERMIND!</button>
-  <button ng-click="startTimer(); getWord()">START!</button>
-  <span>{{ timer }}</span>
-  <span>{{ randomWord }}</span><br>
-
+  <button ng-click="startTimer(); getWord()">START!</button><br>
   <script type="text/javascript">
     $(function() {
       $('#sketch').sketch();
@@ -12,5 +9,11 @@
   </script>
 
   <canvas id="sketch" width="300" height="300"></canvas><br>
-  <a href="#sketch" data-download="png" ng-click="submit()">Submit!</a>
+  <a href="#sketch" data-download="png" ng-click="submit()">Submit!</a><br>
+  <span>{{ timer + ' seconds left!' }}</span><br>
+  <span>{{ 'YOUR WORD IS: ' + randomWord }}</span><br>
+  <div id="user">
+    LOGGED IN AS - {{ user }}<br>
+    <button ng-click="logout()">LOGOUT</button>
+  <div>
 </div>
